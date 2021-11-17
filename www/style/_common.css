@@ -1,0 +1,30 @@
+.button {
+  @reuse .b;
+  @reuse .black;
+  @reuse .br-pill;
+  @reuse .color-inherit;
+  @reuse .flex;
+  @reuse .flex-nowrap;
+  @reuse .items-center;
+  @reuse .justify-center;
+  @reuse .no-underline;
+  @reuse .ph3;
+  @reuse .pv2;
+  @reuse .tc;
+  @reuse .tracked;
+  @reuse .ttu;
+}
+
+.link-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-size: 0% 0.125rem;
+  background-position: bottom right;
+  transition: background-size 0.2s ease-in;
+  transition-property: background-size;
+}
+
+.link-underline-reveal {
+  background-size: 100% 0.125rem;
+  background-position: bottom left;
+}

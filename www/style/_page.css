@@ -1,0 +1,17 @@
+.page {
+  @reuse .flex;
+  @reuse .flex-column;
+
+  &,
+  &-content {
+    @reuse .flex-grow;
+  }
+
+  &-content {
+    @reuse .ph3;
+
+    @media (--breakpoint-not-small) {
+      @reuse .ph5;
+    }
+  }
+}

@@ -1,0 +1,125 @@
+.footer {
+  @reuse .mt-auto;
+
+  & p {
+    @reuse .mv0;
+  }
+
+  &-page {
+    @reuse .bg-off-black;
+    @reuse .flex;
+    @reuse .flex-column;
+    @reuse .flex-wrap;
+    @reuse .off-white;
+    @reuse .pb4;
+    @reuse .ph3;
+    @reuse .pt4;
+    @reuse .tc;
+
+    @media (--breakpoint-not-small) {
+      @reuse .flex-row;
+      @reuse .ph5;
+      @reuse .tl;
+    }
+  }
+
+  &-nav {
+    @reuse .tc;
+
+    @media (--breakpoint-not-small) {
+      @reuse .ml-auto;
+      @reuse .tr;
+    }
+  }
+
+  &-menu {
+    @reuse .list;
+    @reuse .flex;
+    @reuse .flex-column;
+    @reuse .mv0;
+    @reuse .pl0;
+
+    @media (--breakpoint-not-small) {
+      @reuse .nr2;
+    }
+
+    @media (--breakpoint-large) {
+      @reuse .flex-row;
+    }
+  }
+
+  &-menu-item {
+    @reuse .mb2;
+    @media (--breakpoint-large) {
+      @reuse .mb0;
+    }
+  }
+
+  &-menu-link {
+    @reuse .color-inherit;
+    @reuse .link-underline;
+    @reuse .no-underline;
+    @reuse .ma2;
+    @reuse .nt2;
+
+    &:focus,
+    &:hover {
+      @reuse .link-underline-reveal;
+    }
+  }
+
+  &-attribution {
+    @reuse .mt5;
+    @reuse .pt4;
+    @reuse .w-100;
+
+    @media (--breakpoint-not-small) {
+      @reuse .pt6;
+    }
+  }
+
+  &-float {
+    @reuse .bg-black;
+    @reuse .bottom-0;
+    @reuse .ph3;
+    @reuse .pv3;
+    @reuse .white;
+
+    @media (--breakpoint-not-small) {
+      @reuse .sticky;
+      @reuse .ph4;
+      @reuse .pv2;
+    }
+  }
+
+  &-list {
+    @reuse .align-center;
+    @reuse .flex;
+    @reuse .flex-wrap;
+    @reuse .list;
+    @reuse .justify-around;
+    @reuse .mv0;
+    @reuse .pl0;
+    @reuse .pv3;
+    @reuse .tc;
+  }
+
+  &-item {
+    @reuse .pa2;
+  }
+
+  &-label {
+    @reuse .mb1;
+    @reuse .mt0;
+  }
+
+  &-value {
+    @reuse .b;
+    @reuse .f3;
+    @reuse .mv0;
+
+    @media (--breakpoint-large) {
+      @reuse .f2;
+    }
+  }
+}

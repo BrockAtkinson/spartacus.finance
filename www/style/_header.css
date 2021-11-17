@@ -1,0 +1,70 @@
+.header {
+  @reuse .ph4-ns;
+  @reuse .sticky;
+  @reuse .top-0;
+  @reuse .w-100;
+
+  @media (--breakpoint-not-small) {
+    @reuse .pt3;
+  }
+
+  &-wrapper {
+    @reuse .bg-white-50;
+    @reuse .blur;
+    @reuse .flex;
+    @reuse .items-center;
+    @reuse .justify-between;
+    @reuse .ph3;
+    @reuse .pv3;
+
+    @media (--breakpoint-not-small) {
+      @reuse .br-pill;
+      @reuse .ph4;
+    }
+  }
+
+  &-menu {
+    @reuse .dn;
+    @reuse .flex-l;
+    @reuse .items-center;
+    @reuse .list;
+    @reuse .ph3;
+    @reuse .mb0;
+    @reuse .mt0;
+  }
+
+  &-menu-item {
+    @reuse .mh3;
+
+    &:first-of-type {
+      @reuse .ml0;
+    }
+
+    &:last-of-type {
+      @reuse .mr0;
+    }
+  }
+
+  &-link {
+    @reuse .flex;
+    @reuse .b;
+    @reuse .color-inherit;
+    @reuse .link-underline;
+    @reuse .no-underline;
+    @reuse .tc;
+    @reuse .ttu;
+
+    &:focus,
+    &:hover {
+      @reuse .link-underline-reveal;
+    }
+  }
+
+  &-button {
+    @reuse .off-white;
+    @reuse .bg-green;
+    @reuse .b--light-silver;
+    @reuse .b--solid;
+    @reuse .bw1;
+  }
+}

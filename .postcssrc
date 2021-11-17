@@ -1,0 +1,11 @@
+{
+  "plugins": {
+    "postcss-import": true,
+    "postcss-custom-media": true,
+    "postcss-nested": true,
+    "postcss-reuse": true,
+    "autoprefixer": {
+      "grid": true
+    },
+  }
+}
