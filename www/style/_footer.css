@@ -1,12 +1,18 @@
 .footer {
+  @reuse .bg-off-black;
   @reuse .mt-auto;
 
   & p {
     @reuse .mv0;
   }
 
+  &-page,
+  &-list {
+    @reuse .center;
+    @reuse .mw9;
+  }
+
   &-page {
-    @reuse .bg-off-black;
     @reuse .flex;
     @reuse .flex-column;
     @reuse .flex-wrap;
@@ -18,7 +24,7 @@
 
     @media (--breakpoint-not-small) {
       @reuse .flex-row;
-      @reuse .ph5;
+      @reuse .ph4;
       @reuse .tl;
     }
   }
@@ -93,15 +99,19 @@
   }
 
   &-list {
-    @reuse .align-center;
     @reuse .flex;
     @reuse .flex-wrap;
     @reuse .list;
     @reuse .justify-around;
+    @reuse .justify-between;
     @reuse .mv0;
-    @reuse .pl0;
+    @reuse .ph3;
     @reuse .pv3;
     @reuse .tc;
+
+    @media (--breakpoint-not-small) {
+      @reuse .ph4;
+    }
   }
 
   &-item {

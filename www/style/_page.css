@@ -8,10 +8,14 @@
   }
 
   &-content {
+    @reuse .center;
+    @reuse .mw9;
     @reuse .ph3;
+    @reuse .ta-i;
+    @reuse .w-100;
 
     @media (--breakpoint-not-small) {
-      @reuse .ph5;
+      @reuse .ph4;
     }
   }
 }

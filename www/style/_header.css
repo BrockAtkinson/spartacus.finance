@@ -1,21 +1,25 @@
 .header {
-  @reuse .ph4-ns;
   @reuse .sticky;
   @reuse .top-0;
   @reuse .w-100;
 
   @media (--breakpoint-not-small) {
     @reuse .pt3;
+    @reuse .ph4;
   }
 
   &-wrapper {
     @reuse .bg-white-50;
     @reuse .blur;
+    @reuse .center;
+    @reuse .dib;
     @reuse .flex;
     @reuse .items-center;
     @reuse .justify-between;
+    @reuse .mw9;
     @reuse .ph3;
     @reuse .pv3;
+    @reuse .w-100;
 
     @media (--breakpoint-not-small) {
       @reuse .br-pill;
