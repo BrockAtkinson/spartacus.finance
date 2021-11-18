@@ -2,6 +2,7 @@
   @reuse .sticky;
   @reuse .top-0;
   @reuse .w-100;
+  @reuse .z-1;
 
   @media (--breakpoint-not-small) {
     @reuse .pt3;

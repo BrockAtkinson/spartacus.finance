@@ -15,6 +15,14 @@
   @reuse .ttu;
 }
 
+.module {
+  @reuse .mv3;
+
+  @media (--breakpoint-not-small) {
+    @reuse .mv5;
+  }
+}
+
 .link-underline {
   background-image: linear-gradient(currentColor, currentColor);
   background-repeat: no-repeat;
