@@ -1,0 +1,27 @@
+.replace-image {
+  @reuse .dib;
+  @reuse .relative;
+
+  .first,
+  .second {
+    @reuse .ir-pixel;
+  }
+
+  .second {
+    @reuse .absolute;
+    @reuse .left-0;
+    @reuse .top-0;
+    @reuse .vis-hidden;
+  }
+
+  &:focus,
+  &:hover {
+    .first {
+      @reuse .vis-hidden;
+    }
+
+    .second {
+      @reuse .vis;
+    }
+  }
+}

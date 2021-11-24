@@ -30,6 +30,12 @@
   }
 }
 
+.ir {
+  &-pixel {
+    image-rendering: pixelated;
+  }
+}
+
 .blur {
   backdrop-filter: blur(1rem);
 }
@@ -56,4 +62,12 @@
 
 .sticky {
   position: sticky;
+}
+
+.vis {
+  visibility: visible;
+
+  &-hidden {
+    visibility: hidden;
+  }
 }
