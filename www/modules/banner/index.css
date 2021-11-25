@@ -4,11 +4,11 @@
 
   @media (--breakpoint-not-small) {
     @reuse .min-vh-100;
-    @reuse .pv6;
+    @reuse .pv5;
   }
 
   @media (--breakpoint-large) {
-    @reuse .pv7;
+    @reuse .pv6;
   }
 
   &-left,
@@ -17,6 +17,10 @@
       @reuse .fl;
       @reuse .w-50;
     }
+  }
+
+  &-right {
+    @reuse .nr4;
   }
 
   &-content-wrapper {

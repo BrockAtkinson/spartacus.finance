@@ -33,6 +33,20 @@
     }
   }
 
+  &-logo {
+    &-link {
+      @reuse .b;
+      @reuse .flex;
+      @reuse .gray;
+      @reuse .items-center;
+      @reuse .no-underline;
+    }
+
+    &-text {
+      @reuse .ml3;
+    }
+  }
+
   &-nav {
     @reuse .tc;
 
@@ -111,10 +125,6 @@
     @reuse .ph3;
     @reuse .pv3;
     @reuse .tc;
-
-    @media (--breakpoint-not-small) {
-      @reuse .ph4;
-    }
   }
 
   &-item {

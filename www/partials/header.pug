@@ -1,8 +1,12 @@
 header.header
   .header-wrapper
-    .header-item.logo-wrapper
-      .header-logo
-        | Spartacus Finance
+    a(href='/').header-item.header-logo-link
+      picture.header-logo-wrapper
+        img(src='./media/spartacus-logo-1.png' alt='Spartacus Finance logo' height='48' width='48').header-logo
+      span.header-logo-text
+        | Spartacus
+        br
+        | Finance
     
     nav.header-item.nav-wrapper
       ul.header-menu

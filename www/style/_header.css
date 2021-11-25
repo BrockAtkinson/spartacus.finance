@@ -28,6 +28,20 @@
     }
   }
 
+  &-logo {
+    &-link {
+      @reuse .b;
+      @reuse .flex;
+      @reuse .gray;
+      @reuse .items-center;
+      @reuse .no-underline;
+    }
+
+    &-text {
+      @reuse .ml3;
+    }
+  }
+
   &-menu {
     @reuse .dn;
     @reuse .flex-l;
