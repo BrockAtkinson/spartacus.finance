@@ -8,3 +8,4 @@
 @import '_page';
 @import '_util';
 @import '../modules/banner';
+@import '../modules/content-grid';

@@ -5,17 +5,7 @@ mixin pic(alt, first, second, w, h)
 
 .page-content
   include ../modules/banner/template
-  .module.content-grid
-    h2.content-grid-title
-      | Sustainable Liquidity Pool
-    .content-grid-left
-      p $9,770,092 Protocol Owned Liquidity
-      p 99.7% of Total LP Supply
-    .content-grid-right
-      p
-        | Spartacus plays an important role in Phantom ecosystem by funding liquidity pools with its crypto assets to earn a yield.
-      p
-        | Our liquidity pool is sustainably produced, which means it is not powered by inflationary means. It it democratically sourced and super fluid.
+  include ../modules/content-grid/template
 
   .module.explainer.tc
     +pic('Bond 1', 'media/Bond1.png', 'media/Bond2.png', 83, 71)

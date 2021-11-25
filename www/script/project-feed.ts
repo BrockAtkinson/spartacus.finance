@@ -109,12 +109,17 @@ function pageContentUpdate(content) {
   });
 }
 
+const DEBUG = false;
+
 function init() {
   query(treasuryDataQuery, (result) => {
     let metrics = result.data.protocolMetrics;
     let latest = metrics[0];
+    DEBUG ? console.log('latest', latest) : null;
     pageContentUpdate(latest);
   });
+
+  DEBUG ? query(rebasesDataQuery, slog('Rebases')) : null;
 }
 
 window.addEventListener('load', init);

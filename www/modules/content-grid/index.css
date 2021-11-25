@@ -1,0 +1,48 @@
+.content-grid {
+  &-title {
+    @reuse .mb4;
+    @reuse .off-black;
+    @reuse .tc;
+  }
+
+  &-highlight {
+    @reuse .b;
+    @reuse .db;
+    @reuse .f3;
+    @reuse .green;
+    @reuse .mb1;
+
+    @media (--breakpoint-not-small) {
+      @reuse .f2;
+    }
+  }
+
+  &-clear {
+    @reuse .cl;
+  }
+
+  &-left,
+  &-right {
+    @reuse .w-100;
+
+    @media (--breakpoint-large) {
+      @reuse .fl;
+      @reuse .w-50;
+    }
+  }
+
+  &-left {
+    @media (--breakpoint-large) {
+      @reuse .tr;
+      @reuse .pl6;
+      @reuse .pr4;
+    }
+  }
+
+  &-right {
+    @media (--breakpoint-large) {
+      @reuse .pl4;
+      @reuse .pr6;
+    }
+  }
+}
