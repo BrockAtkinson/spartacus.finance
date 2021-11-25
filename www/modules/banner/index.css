@@ -21,6 +21,10 @@
 
   &-right {
     @reuse .nr4;
+
+    @media (--breakpoint-large) {
+      @reuse .mr0;
+    }
   }
 
   &-content-wrapper {

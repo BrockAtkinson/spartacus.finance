@@ -21,12 +21,25 @@
   &-left,
   &-right {
     @media (--breakpoint-large) {
-      @reuse .db;
       @reuse .fl;
       @reuse .h-100;
       @reuse .ph5;
       @reuse .w-50;
     }
+  }
+
+  &-link {
+    @reuse .no-underline;
+    @reuse .off-black;
+
+    @media (--breakpoint-large) {
+      @reuse .db;
+    }
+  }
+
+  &-subtitle {
+    @reuse .f4;
+    @reuse .mb1;
   }
 
   &-description {
