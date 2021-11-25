@@ -103,7 +103,6 @@
     @reuse .flex-wrap;
     @reuse .list;
     @reuse .justify-around;
-    @reuse .justify-between;
     @reuse .mv0;
     @reuse .ph3;
     @reuse .pv3;

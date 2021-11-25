@@ -64,6 +64,25 @@
   position: sticky;
 }
 
+.prefix {
+  &-dollar::before {
+    content: '$';
+  }
+
+  &-percent::before {
+    content: '%';
+  }
+}
+
+.suffix {
+  &-dollar::after {
+    content: '$';
+  }
+  &-percent::after {
+    content: '%';
+  }
+}
+
 .vis {
   visibility: visible;
 

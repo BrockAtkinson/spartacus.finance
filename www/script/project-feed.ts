@@ -6,6 +6,8 @@ import {
   gql
 } from "@apollo/client";
 
+let lang = navigator.language;
+
 const FTM_GRAPH_URL = 'https://api.thegraph.com/subgraphs/name/spartacus-finance/ftm2';
 
 const client = new ApolloClient({
@@ -73,8 +75,46 @@ function query(gql, fn) {
     .catch(err);
 }
 
-query(treasuryDataQuery, (result) => {
-  console.log('Treasury', result.data.protocolMetrics[0]);
-});
+function qsa(str) {
+  return document.querySelectorAll(str);
+}
 
-// query(rebasesDataQuery, slog('Rebases'));
+function humanizeNumber(num) {
+  return parseFloat(num).toLocaleString(lang, {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  });
+}
+
+function pageContentUpdate(content) {
+  let keys = Object.keys(content);
+  keys.forEach(key => {
+    let val = content[key];
+    let targets = qsa('[data-feed=' + key + ']')
+    ;
+    targets.forEach(target => {
+      target.textContent = humanizeNumber(val);
+    });
+  });
+
+  let divisions = qsa('[data-numerator][data-denominator]');
+  divisions.forEach(el => {
+    let data = el.dataset;
+    let top = content[el.dataset.numerator];
+    let bot = content[el.dataset.denominator];
+    let numerator = parseFloat(top);
+    let denominator = parseFloat(bot);
+    let divide = denominator / numerator * 100;
+    el.textContent = humanizeNumber(divide);
+  });
+}
+
+function init() {
+  query(treasuryDataQuery, (result) => {
+    let metrics = result.data.protocolMetrics;
+    let latest = metrics[0];
+    pageContentUpdate(latest);
+  });
+}
+
+window.addEventListener('load', init);
