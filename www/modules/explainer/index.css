@@ -1,0 +1,38 @@
+.explainer {
+  @reuse .tl;
+
+  @media (--breakpoint-large) {
+    @reuse .tc;
+  }
+
+  &-title {
+    @reuse .green;
+    @reuse .mb0;
+  }
+
+  &-container {
+    @media (--breakpoint-large) {
+      @reuse .items-end;
+      @reuse .flex;
+      @reuse .nt4;
+    }
+  }
+
+  &-left,
+  &-right {
+    @media (--breakpoint-large) {
+      @reuse .db;
+      @reuse .fl;
+      @reuse .h-100;
+      @reuse .ph5;
+      @reuse .w-50;
+    }
+  }
+
+  &-description {
+    @media (--breakpoint-medium) {
+      @reuse .pr5;
+      @reuse .mw6;
+    }
+  }
+}

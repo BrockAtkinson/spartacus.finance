@@ -16,10 +16,14 @@
 }
 
 .module {
-  @reuse .mv3;
+  @reuse .mv5;
 
   @media (--breakpoint-not-small) {
-    @reuse .mv5;
+    @reuse .mv6;
+  }
+
+  @media (--breakpoint-large) {
+    @reuse .mv7;
   }
 }
 

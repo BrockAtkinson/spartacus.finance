@@ -17,5 +17,9 @@
     @media (--breakpoint-not-small) {
       @reuse .ph4;
     }
+
+    @media (--breakpoint-large) {
+      @reuse .ph5;
+    }
   }
 }

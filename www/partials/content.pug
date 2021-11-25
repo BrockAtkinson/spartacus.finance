@@ -1,22 +1,4 @@
-mixin pic(alt, first, second, w, h)
-  .replace-image
-    img(src=first alt=alt height=h width=w).first
-    img(src=second height=h width=w).second
-
 .page-content
   include ../modules/banner/template
   include ../modules/content-grid/template
-
-  .module.explainer.tc
-    +pic('Bond 1', 'media/Bond1.png', 'media/Bond2.png', 83, 71)
-    +pic('Bond 1', 'media/Bond1.png', 'media/Bond2.png', 166, 142)
-    +pic('Bond 1', 'media/Bond1.png', 'media/Bond2.png', 249, 213)
-
-    +pic('Army 1', 'media/Army1.png', 'media/Army2.png', 68, 96)
-    +pic('Stake 1', 'media/Stake1.png', 'media/Stake2.png', 52, 120)
-
-    +pic('Army 1', 'media/Army1.png', 'media/Army2.png', 136, 192)
-    +pic('Stake 1', 'media/Stake1.png', 'media/Stake2.png', 104, 240)
-
-    +pic('Army 1', 'media/Army1.png', 'media/Army2.png', 204, 288)
-    +pic('Stake 1', 'media/Stake1.png', 'media/Stake2.png', 156, 360)
+  include ../modules/explainer/template

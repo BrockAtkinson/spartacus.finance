@@ -27,6 +27,10 @@
       @reuse .ph4;
       @reuse .tl;
     }
+
+    @media (--breakpoint-large) {
+      @reuse .ph5;
+    }
   }
 
   &-nav {

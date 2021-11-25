@@ -1,0 +1,28 @@
+mixin pic(alt, first, second, w, h)
+  .replace-image
+    img(src=first alt=alt height=h width=w).first
+    img(src=second height=h width=w).second
+
+.module.explainer.tc
+  h3.explainer-title.
+    Information about (Λ, Λ)
+  p
+
+  .explainer-container
+    a(href='//app.spartacus.finance/#/bond').explainer-left
+      +pic('Bond 1', 'media/Bond1.png', 'media/Bond2.png', 166, 142)
+      h4.explainer-subtitle
+        | Bonding
+      p.explainer-description
+        | Bit of an explanation about bonding. Bit of an explanation about bonding. Bit of an explanation about bonding. 
+
+    a(href='//app.spartacus.finance/#/stake').explainer-right
+      .nowrap
+        +pic('Army 1', 'media/Army1.png', 'media/Army2.png', 136, 192)
+        +pic('Stake 1', 'media/Stake1.png', 'media/Stake2.png', 104, 240)
+      h4.explainer-subtitle
+        | Staking
+      p.explainer-description
+        | Bit of an explanation about staking. Bit of an explanation about staking. Bit of an explanation about staking. 
+
+    .cl
