@@ -72,6 +72,16 @@
   }
 }
 
+.pe {
+  &-auto {
+    pointer-events: auto;
+  }
+
+  &-none {
+    pointer-events: none;
+  }
+}
+
 .sticky {
   position: sticky;
 }
@@ -121,10 +131,24 @@
   }
 }
 
+.translate-y {
+  &-0 {
+    transform: translateY(0);
+  }
+
+  &--100 {
+    transform: translateY(-100%);
+  }
+}
+
 .vis {
   visibility: visible;
 
   &-hidden {
     visibility: hidden;
   }
+}
+
+.z--1 {
+  z-index: -1;
 }
