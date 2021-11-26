@@ -30,18 +30,28 @@
   }
 }
 
-.ir {
-  &-pixel {
-    image-rendering: pixelated;
-  }
-}
-
 .blur {
   backdrop-filter: blur(1rem);
 }
 
 .flex-grow {
   flex-grow: 1;
+}
+
+.h {
+  &-1 {
+    height: 0.0625rem;
+  }
+
+  &-2 {
+    height: 0.125rem;
+  }
+}
+
+.ir {
+  &-pixel {
+    image-rendering: pixelated;
+  }
 }
 
 .mb-auto {
@@ -52,12 +62,14 @@
   margin-top: auto;
 }
 
-.ta-i {
-  text-align: initial;
-}
+.min-w {
+  &-1 {
+    min-width: 1rem;
+  }
 
-.ta-r {
-  text-align: revert;
+  &-2 {
+    min-width: 2rem;
+  }
 }
 
 .sticky {
@@ -80,6 +92,26 @@
   }
   &-percent::after {
     content: '%';
+  }
+}
+
+.ta-i {
+  text-align: initial;
+}
+
+.ta-r {
+  text-align: revert;
+}
+
+.trans {
+  transition: all var(--speed) var(--ease);
+
+  &-opacity {
+    transition-property: opacity;
+  }
+
+  &-transform {
+    transition-property: transform;
   }
 }
 

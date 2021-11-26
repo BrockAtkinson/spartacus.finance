@@ -1,3 +1,4 @@
+import qsa from './util/queryselector';
 import {
   ApolloClient,
   InMemoryCache,
@@ -75,10 +76,6 @@ function query(gql, fn) {
     .catch(err);
 }
 
-function qsa(str) {
-  return document.querySelectorAll(str);
-}
-
 function humanizeNumber(num) {
   return parseFloat(num).toLocaleString(lang, {
     minimumFractionDigits: 2,
@@ -109,17 +106,15 @@ function pageContentUpdate(content) {
   });
 }
 
-const DEBUG = false;
-
 function init() {
   query(treasuryDataQuery, (result) => {
     let metrics = result.data.protocolMetrics;
     let latest = metrics[0];
-    DEBUG ? console.log('latest', latest) : null;
+    // console.log('latest', latest);
     pageContentUpdate(latest);
   });
 
-  DEBUG ? query(rebasesDataQuery, slog('Rebases')) : null;
+  // query(rebasesDataQuery, slog('Rebases'));
 }
 
 window.addEventListener('load', init);

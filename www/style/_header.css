@@ -29,12 +29,15 @@
   }
 
   &-logo {
+    @reuse .min-w-2;
+
     &-link {
       @reuse .b;
       @reuse .flex;
       @reuse .gray;
       @reuse .items-center;
       @reuse .no-underline;
+      @reuse .pr2;
     }
 
     &-text {
@@ -44,12 +47,15 @@
 
   &-menu {
     @reuse .dn;
-    @reuse .flex-l;
     @reuse .items-center;
     @reuse .list;
     @reuse .ph3;
     @reuse .mb0;
     @reuse .mt0;
+
+    @media (--breakpoint-large) {
+      @reuse .flex;
+    }
   }
 
   &-menu-item {
@@ -80,10 +86,59 @@
   }
 
   &-button {
-    @reuse .off-white;
     @reuse .bg-green;
     @reuse .b--light-silver;
     @reuse .b--solid;
     @reuse .bw1;
+    @reuse .dn;
+    @reuse .off-white;
+
+    @media (--breakpoint-large) {
+      @reuse .flex;
+    }
+  }
+
+  &-hamburger {
+    @reuse .br-100;
+    @reuse .bw0;
+    @reuse .h2;
+    @reuse .pointer;
+    @reuse .w2;
+
+    @media (--breakpoint-large) {
+      @reuse .dn;
+    }
+
+    &-line {
+      @reuse .bg-black;
+      @reuse .h-2;
+      @reuse .mv1;
+      @reuse .o-100;
+      @reuse .trans;
+      @reuse .trans-opacity;
+      @reuse .w-100;
+
+      &:first-of-type,
+      &:last-of-type {
+        @reuse .trans-transform;
+      }
+    }
+
+    &--open &-line {
+      @reuse .o-0;
+
+      &:first-of-type,
+      &:last-of-type {
+        @reuse .o-100;
+      }
+
+      &:first-of-type {
+        transform: rotate(-45deg) translate(-0.25rem, 0.25rem);
+      }
+
+      &:last-of-type {
+        transform: rotate(45deg) translate(-0.25rem, -0.25rem);
+      }
+    }
   }
 }
