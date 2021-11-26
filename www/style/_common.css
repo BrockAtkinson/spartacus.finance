@@ -15,6 +15,18 @@
   @reuse .ttu;
 }
 
+.module {
+  @reuse .mv5;
+
+  @media (--breakpoint-not-small) {
+    @reuse .mv6;
+  }
+
+  @media (--breakpoint-large) {
+    @reuse .mv7;
+  }
+}
+
 .link-underline {
   background-image: linear-gradient(currentColor, currentColor);
   background-repeat: no-repeat;
@@ -27,4 +39,21 @@
 .link-underline-reveal {
   background-size: 100% 0.125rem;
   background-position: bottom left;
+}
+
+.active-menu-button {
+  @reuse .o-0;
+
+  &:first-of-type,
+  &:last-of-type {
+    @reuse .o-100;
+  }
+
+  &:first-of-type {
+    transform: rotate(-45deg) translate(-0.25rem, 0.25rem);
+  }
+
+  &:last-of-type {
+    transform: rotate(45deg) translate(-0.25rem, -0.25rem);
+  }
 }

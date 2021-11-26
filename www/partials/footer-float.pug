@@ -2,13 +2,13 @@ footer.footer-float
   ul.footer-list
     li.footer-item
       p.footer-label Total SPA Staked
-      p.footer-value 67.5%
+      p(data-numerator='ohmCirculatingSupply' data-denominator='sOhmCirculatingSupply').footer-value.suffix-percent 00.0%
     li.footer-item
       p.footer-label Treasury Balance
-      p.footer-value $22,478,924
+      p(data-feed='treasuryMarketValue').footer-value.prefix-dollar 00,000,000
     li.footer-item
       p.footer-label Market Cap
-      p.footer-value $48,548,426
+      p(data-feed='marketCap').footer-value.prefix-dollar 00,000,000
     li.footer-item
       p.footer-label Current APY
-      p.footer-value 1,100,055.2%
+      p(data-feed='currentAPY').footer-value.suffix-percent 0,000,000.0

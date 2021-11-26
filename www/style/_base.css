@@ -16,3 +16,7 @@ body {
   @reuse .sans-serif;
   @reuse .poppins;
 }
+
+img {
+  height: auto;
+}

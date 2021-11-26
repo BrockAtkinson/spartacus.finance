@@ -7,56 +7,10 @@
 :root {
   --off-white: #f2f2f2;
   --off-black: #121212;
-}
 
-.off-white {
-  color: var(--off-white);
-}
+  --speed: 0.2s;
+  --fast: 0.1s;
+  --slow: 0.4s;
 
-.bg-off-white {
-  background-color: var(--off-white);
-}
-
-.off-black {
-  color: var(--off-black);
-}
-
-.bg-off-black {
-  background-color: var(--off-black);
-}
-
-.bg {
-  &-white {
-    &-25 {
-      background-color: rgba(255, 255, 255, 0.25);
-    }
-
-    &-50 {
-      background-color: rgba(255, 255, 255, 0.50);
-    }
-
-    &-75 {
-      background-color: rgba(255, 255, 255, 0.75);
-    }
-  }
-}
-
-.blur {
-  backdrop-filter: blur(1rem);
-}
-
-.flex-grow {
-  flex-grow: 1;
-}
-
-.mb-auto {
-  margin-bottom: auto;
-}
-
-.mt-auto {
-  margin-top: auto;
-}
-
-.sticky {
-  position: sticky;
+  --ease: ease-in-out;
 }

@@ -1,0 +1,154 @@
+.off-white {
+  color: var(--off-white);
+}
+
+.bg-off-white {
+  background-color: var(--off-white);
+}
+
+.off-black {
+  color: var(--off-black);
+}
+
+.bg-off-black {
+  background-color: var(--off-black);
+}
+
+.bg {
+  &-white {
+    &-25 {
+      background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    &-50 {
+      background-color: rgba(255, 255, 255, 0.50);
+    }
+
+    &-75 {
+      background-color: rgba(255, 255, 255, 0.75);
+    }
+  }
+}
+
+.blur {
+  backdrop-filter: blur(1rem);
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.h {
+  &-1 {
+    height: 0.0625rem;
+  }
+
+  &-2 {
+    height: 0.125rem;
+  }
+}
+
+.ir {
+  &-pixel {
+    image-rendering: pixelated;
+  }
+}
+
+.mb-auto {
+  margin-bottom: auto;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.min-w {
+  &-1 {
+    min-width: 1rem;
+  }
+
+  &-2 {
+    min-width: 2rem;
+  }
+}
+
+.pe {
+  &-auto {
+    pointer-events: auto;
+  }
+
+  &-none {
+    pointer-events: none;
+  }
+}
+
+.sticky {
+  position: sticky;
+}
+
+.prefix {
+  &-dollar::before {
+    content: '$';
+  }
+
+  &-percent::before {
+    content: '%';
+  }
+}
+
+.suffix {
+  &-dollar::after {
+    content: '$';
+  }
+  &-percent::after {
+    content: '%';
+  }
+}
+
+.ta-i {
+  text-align: initial;
+}
+
+.ta-r {
+  text-align: revert;
+}
+
+.top {
+  &-100 {
+    top: 100%;
+  }
+}
+
+.trans {
+  transition: all var(--speed) var(--ease);
+
+  &-opacity {
+    transition-property: opacity;
+  }
+
+  &-transform {
+    transition-property: transform;
+  }
+}
+
+.translate-y {
+  &-0 {
+    transform: translateY(0);
+  }
+
+  &--100 {
+    transform: translateY(-100%);
+  }
+}
+
+.vis {
+  visibility: visible;
+
+  &-hidden {
+    visibility: hidden;
+  }
+}
+
+.z--1 {
+  z-index: -1;
+}

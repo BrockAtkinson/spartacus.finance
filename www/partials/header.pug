@@ -1,21 +1,31 @@
 header.header
   .header-wrapper
-    .header-item.logo-wrapper
-      .header-logo
-        | Spartacus Finance
-    
-    nav.header-item.nav-wrapper
-      ul.header-menu
-        li.header-menu-item
-          a(href='#news').header-link
-            | News
-        li.header-menu-item
-          a(href='#dashboard').header-link
-            | Dashboard
-        li.header-menu-item
-          a(href='#how-to-buy').header-link
-            | How to buy
+    a(href='/').header-item.header-logo-link
+      picture.header-logo-wrapper
+        img(src='./media/spartacus-logo-1.png' alt='Spartacus Finance logo' height='48' width='48').header-logo
+      span.header-logo-text
+        | Spartacus
+        br
+        | Finance
 
-    .header-item.button-wrapper
-      a.header-button.button(href='//app.spartacus.finance')
-        | Enter App
+    button.header-hamburger
+      .header-hamburger-line
+      .header-hamburger-line
+      .header-hamburger-line
+
+    .header-mobile
+      nav.header-item.header-nav
+        ul.header-menu
+          li.header-menu-item
+            a(href='#news').header-link
+              | News
+          li.header-menu-item
+            a(href='#dashboard').header-link
+              | Dashboard
+          li.header-menu-item
+            a(href='#how-to-buy').header-link
+              | How to buy
+
+      .header-item.header-button-wrapper
+        a.header-button.button(href='//app.spartacus.finance')
+          | Enter App
