@@ -67,16 +67,16 @@ function err(error) {
   console.error(error);
 }
 
+function qsa(str) {
+  return document.querySelectorAll(str);
+}
+
 function query(gql, fn) {
   client.query({
     query: gql,
   })
     .then(fn)
     .catch(err);
-}
-
-function qsa(str) {
-  return document.querySelectorAll(str);
 }
 
 function humanizeNumber(num) {
@@ -109,17 +109,15 @@ function pageContentUpdate(content) {
   });
 }
 
-const DEBUG = false;
-
 function init() {
   query(treasuryDataQuery, (result) => {
     let metrics = result.data.protocolMetrics;
     let latest = metrics[0];
-    DEBUG ? console.log('latest', latest) : null;
+    // console.log('latest', latest);
     pageContentUpdate(latest);
   });
 
-  DEBUG ? query(rebasesDataQuery, slog('Rebases')) : null;
+  // query(rebasesDataQuery, slog('Rebases'));
 }
 
 window.addEventListener('load', init);
