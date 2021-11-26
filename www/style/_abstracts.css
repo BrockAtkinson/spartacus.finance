@@ -7,4 +7,10 @@
 :root {
   --off-white: #f2f2f2;
   --off-black: #121212;
+
+  --speed: 0.2s;
+  --fast: 0.1s;
+  --slow: 0.4s;
+
+  --ease: ease-in-out;
 }
