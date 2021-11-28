@@ -4,5 +4,7 @@ head
   title Spartacus Finance
   link(href='./style/main.css' rel='stylesheet')
   script(src='script/index.js' type='module')
-body
+body(class='no-js')
+  script.
+    document.body.classList.remove('no-js')
   include partials/page
