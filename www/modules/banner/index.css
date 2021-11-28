@@ -1,13 +1,14 @@
 .banner {
   @reuse .cf;
-  @reuse .mv0;
+  @reuse .tc;
 
   @media (--breakpoint-not-small) {
-    @reuse .pv5;
+    @reuse .mv5;
   }
 
   @media (--breakpoint-large) {
     @reuse .pv6;
+    @reuse .tl;
   }
 
   &-left,
@@ -52,8 +53,10 @@
   &-content {
     @reuse .f4;
     @reuse .tracked;
+    @reuse .ph5;
 
-    @media (--breakpoint-not-small) {
+    @media (--breakpoint-large) {
+      @reuse .pl0;
       @reuse .pr7;
     }
   }

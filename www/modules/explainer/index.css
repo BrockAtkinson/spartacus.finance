@@ -1,9 +1,5 @@
 .explainer {
-  @reuse .tl;
-
-  @media (--breakpoint-large) {
-    @reuse .tc;
-  }
+  @reuse .tc;
 
   &-title {
     @reuse .green;
@@ -43,9 +39,13 @@
   }
 
   &-description {
-    @media (--breakpoint-medium) {
-      @reuse .pr5;
-      @reuse .mw6;
+
+    @media (--breakpoint-not-small) {
+      @reuse .ph4;
+    }
+
+    @media (--breakpoint-large) {
+      @reuse .ph0;
     }
   }
 }
