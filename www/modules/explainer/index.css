@@ -1,5 +1,6 @@
 .explainer {
   @reuse .tc;
+  @reuse .brand-dark;
 
   &-title {
     @reuse .green;
@@ -26,7 +27,7 @@
 
   &-link {
     @reuse .no-underline;
-    @reuse .off-black;
+    @reuse .color-inherit;
 
     @media (--breakpoint-large) {
       @reuse .db;

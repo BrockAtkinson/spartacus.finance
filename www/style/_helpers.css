@@ -1,3 +1,19 @@
+.brand-dark {
+  color: var(--dark-blue);
+}
+
+.bg-brand-dark {
+  background-color: var(--dark-blue);
+}
+
+.grey-1 {
+  color: var(--grey-0);
+}
+
+.bg-grey-1 {
+  background-color: var(--grey-0);
+}
+
 .off-white {
   color: var(--off-white);
 }
