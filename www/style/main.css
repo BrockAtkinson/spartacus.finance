@@ -8,5 +8,6 @@
 @import './_page';
 @import './_util';
 @import '../modules/banner';
+@import '../modules/cards';
 @import '../modules/content-grid';
 @import '../modules/explainer';
