@@ -1,0 +1,57 @@
+.cards {
+  @reuse .tc;
+
+  &-wrapper {
+    @reuse .items-stretch;
+    @reuse .flex;
+    @reuse .justify-between;
+    @reuse .list;
+    @reuse .nl3;
+    @reuse .nr3;
+    @reuse .mv0;
+    @reuse .pl0;
+    @reuse .overflow-x-auto;
+
+    @media (--breakpoint-large) {
+      @reuse .nl4;
+      @reuse .nr4;
+    }
+  }
+
+  &-card {
+    @reuse .bg-white;
+    @reuse .br4;
+    @reuse .flex;
+    @reuse .flex-column;
+    @reuse .flex-grow;
+    @reuse .mb4;
+    @reuse .mh3;
+    @reuse .min-w-5;
+    @reuse .ph4;
+    @reuse .pv5;
+    @reuse .w-third;
+
+    @media (--breakpoint-large) {
+      @reuse .mh4;
+    }
+
+    &-icon {
+      color: var(--light-green);
+      @reuse .mt-auto;
+    }
+
+    &-title {
+      color: var(--dark-blue);
+      @reuse .mb-auto;
+      @reuse .pb4;
+      @reuse .ttu;
+    }
+
+    &-content {
+      color: var(--grey-1);
+      @reuse .lh-copy;
+      @reuse .mv-auto;
+      @reuse .ph4;
+    }
+  }
+}

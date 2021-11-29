@@ -1,4 +1,5 @@
 .banner {
+  @reuse .brand-dark;
   @reuse .cf;
   @reuse .tc;
 

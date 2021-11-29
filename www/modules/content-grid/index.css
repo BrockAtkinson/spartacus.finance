@@ -3,7 +3,7 @@
 
   &-title {
     @reuse .mb4;
-    @reuse .off-black;
+    @reuse .brand-dark;
   }
 
   &-highlight {
@@ -24,6 +24,9 @@
 
   &-left,
   &-right {
+    @reuse .brand-dark;
+    @reuse .f5;
+    @reuse .lh-copy;
     @reuse .ph0;
     @reuse .w-100;
 

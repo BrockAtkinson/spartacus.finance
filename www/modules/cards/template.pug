@@ -1,0 +1,26 @@
+-
+  let cards = [
+    {
+      icon: 'thumbs-up',
+      title: 'Growing treasury',
+      content: 'Bond sales and liquidity fees increase Treasury values, which back outstanding SPA tokens with intrinsic value.',
+    },
+    {
+      icon: 'chart',
+      title: 'Protocol owned liquidity',
+      content: 'No more predatory farmers.\n Lock-in liquidity also help regulate SPA supply.',
+    },
+    {
+      icon: 'star',
+      title: 'Decentralized governance',
+      content: 'Λ holders decide Spartacus\' future via on-chain voting.',
+    }
+  ];
+
+.module.cards
+  ul.cards-wrapper
+    each card, i in cards
+      li.cards-card
+        .cards-card-icon= card.icon
+        h3.cards-card-title= card.title
+        p.cards-card-content= card.content
