@@ -39,7 +39,13 @@
       @reuse .flex;
       @reuse .gray;
       @reuse .items-center;
+      @reuse .justify-center;
+      @reuse .mb4;
       @reuse .no-underline;
+
+      @media (--breakpoint-not-small) {
+        @reuse .items-start;
+      }
     }
 
     &-text {

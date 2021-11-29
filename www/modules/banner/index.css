@@ -1,14 +1,14 @@
 .banner {
   @reuse .cf;
-  @reuse .mv0;
+  @reuse .tc;
 
   @media (--breakpoint-not-small) {
-    @reuse .min-vh-100;
-    @reuse .pv5;
+    @reuse .mv5;
   }
 
   @media (--breakpoint-large) {
     @reuse .pv6;
+    @reuse .tl;
   }
 
   &-left,
@@ -20,7 +20,11 @@
   }
 
   &-right {
-    @reuse .nr4;
+    @reuse .nr3;
+
+    @media (--breakpoint-not-small) {
+      @reuse .nr4;
+    }
 
     @media (--breakpoint-large) {
       @reuse .mr0;
@@ -28,24 +32,31 @@
   }
 
   &-content-wrapper {
-    @reuse .pv4;
+    @reuse .pb4;
 
-    @media (--breakpoint-not-small) {
+    @media (--breakpoint-large) {
       @reuse .pv5;
     }
   }
 
   &-title {
     @reuse .b;
-    @reuse .f1;
+    @reuse .f2;
+    @reuse .mt0;
     @reuse .ttu;
+
+    @media (--breakpoint-not-small) {
+      @reuse .f1;
+    }
   }
 
   &-content {
     @reuse .f4;
     @reuse .tracked;
+    @reuse .ph5;
 
-    @media (--breakpoint-not-small) {
+    @media (--breakpoint-large) {
+      @reuse .pl0;
       @reuse .pr7;
     }
   }

@@ -14,19 +14,17 @@
   background-color: var(--off-black);
 }
 
-.bg {
-  &-white {
-    &-25 {
-      background-color: rgba(255, 255, 255, 0.25);
-    }
+.bg-white {
+  &-25 {
+    background-color: rgba(255, 255, 255, 0.25);
+  }
 
-    &-50 {
-      background-color: rgba(255, 255, 255, 0.50);
-    }
+  &-50 {
+    background-color: rgba(255, 255, 255, 0.50);
+  }
 
-    &-75 {
-      background-color: rgba(255, 255, 255, 0.75);
-    }
+  &-75 {
+    background-color: rgba(255, 255, 255, 0.75);
   }
 }
 
@@ -122,6 +120,10 @@
 .trans {
   transition: all var(--speed) var(--ease);
 
+  &-bg-color {
+    transition-property: background-color;
+  }
+
   &-opacity {
     transition-property: opacity;
   }
@@ -134,6 +136,14 @@
 .translate-y {
   &-0 {
     transform: translateY(0);
+  }
+
+  &-1 {
+    transform: translateY(1rem);
+  }
+
+  &--1 {
+    transform: translateY(-1rem);
   }
 
   &--100 {

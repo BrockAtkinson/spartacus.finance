@@ -1,8 +1,9 @@
 .content-grid {
+  @reuse .tc;
+
   &-title {
     @reuse .mb4;
     @reuse .off-black;
-    @reuse .tc;
   }
 
   &-highlight {
@@ -23,10 +24,16 @@
 
   &-left,
   &-right {
+    @reuse .ph0;
     @reuse .w-100;
+
+    @media (--breakpoint-not-small) {
+      @reuse .ph5;
+    }
 
     @media (--breakpoint-large) {
       @reuse .fl;
+      @reuse .ph0;
       @reuse .w-50;
     }
   }
@@ -43,6 +50,7 @@
     @media (--breakpoint-large) {
       @reuse .pl4;
       @reuse .pr6;
+      @reuse .tl;
     }
   }
 }

@@ -2,7 +2,7 @@
   "name": "spartacus.finance",
   "version": "0.0.1",
   "scripts": {
-    "build": "parcel build www/index.html",
+    "build": "parcel build www/index.pug --public-url ./",
     "start": "parcel www/index.pug"
   },
   "author": "Brock Atkinson",

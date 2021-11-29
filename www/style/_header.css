@@ -20,6 +20,8 @@
     @reuse .mw9;
     @reuse .ph3;
     @reuse .pv3;
+    @reuse .trans;
+    @reuse .trans-bg-color;
     @reuse .w-100;
 
     @media (--breakpoint-not-small) {
@@ -146,39 +148,57 @@
 
   &-mobile {
     @reuse .absolute;
+    @reuse .bg-white;
+    @reuse .br4;
+    @reuse .br--bottom;
     @reuse .left-0;
     @reuse .right-0;
+    @reuse .inline-flex;
     @reuse .items-center;
     @reuse .flex-grow;
+    @reuse .flex-column;
     @reuse .pe-none;
-    @reuse .ph4;
+    @reuse .pb3;
+    @reuse .mh0;
     @reuse .o-0;
     @reuse .top-100;
     @reuse .trans;
     transition-property: opacity, transform;
     @reuse .translate-y--100;
-    @reuse .w-100;
     @reuse .z--1;
 
     &:focus-within {
       @reuse .o-100;
+      @reuse .pb4;
       @reuse .pe-auto;
       @reuse .translate-y-0;
+    }
+
+    @media (--breakpoint-not-small) {
+      @reuse .br-pill;
+      @reuse .br--bottom;
+      @reuse .mh5;
+      @reuse .translate-y-0;
+      @reuse trans-opacity;
     }
 
     @media (--breakpoint-large) {
-      @reuse .flex;
+      @reuse .bg-transparent;
+      @reuse .flex-row;
       @reuse .o-100;
       @reuse .pe-auto;
+      @reuse .mh0;
+      @reuse .pb0;
       @reuse .ph0;
       @reuse .static;
-      @reuse .translate-y-0;
     }
   }
 
+  &--mobile-menu &-wrapper {
+    @reuse .bg-white;
+  }
+
   &--mobile-menu &-mobile {
-    @reuse .inline-flex;
-    @reuse .flex-column;
     @reuse .o-100;
     @reuse .pe-auto;
     @reuse .translate-y-0;
@@ -190,5 +210,20 @@
 
   &--mobile-menu &-hamburger-line {
     @reuse .active-menu-button;
+  }
+}
+
+.no-js {
+  .header {
+    &-hamburger:active ~ &-mobile,
+    &-hamburger:focus ~ &-mobile {
+      @reuse .o-100;
+      @reuse .pe-auto;
+      @reuse .translate-y-0;
+    }
+
+    &-hamburger:focus > &-line {
+      @reuse .active-menu-button;
+    }
   }
 }
