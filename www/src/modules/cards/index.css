@@ -1,5 +1,6 @@
 .cards {
   @reuse .tc;
+  @reuse .mb6;
 
   &-wrapper {
     @reuse .items-stretch;

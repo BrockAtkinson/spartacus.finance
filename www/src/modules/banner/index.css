@@ -22,7 +22,7 @@
 
   &-title {
     @reuse .b;
-    @reuse .f2;
+    @reuse .f3;
     @reuse .lh-title;
     @reuse .mt0;
     @reuse .ttu;

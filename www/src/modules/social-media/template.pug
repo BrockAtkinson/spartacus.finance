@@ -15,14 +15,14 @@
   ];
 
 .module.social-media-links
-  .container
+  .social-media-links-wrapper
     h4.social-media-links-title
       | Join the community
-  .social-media-links-content
-    p Get updates on new products, features and more.
-  ul.social-media-links-list
-    each link, i in links
-      li.social-media-links-item
-        a(href=link.url)
-          picture
-            img(src='./icon/socialmedia-' + link.share + '.svg')
+    .social-media-links-content
+      p Get updates on new products, features and more.
+    ul.social-media-links-list
+      each link, i in links
+        li.social-media-links-item
+          a(href=link.url)
+            picture
+              img(src='./icon/socialmedia-' + link.share + '.svg')

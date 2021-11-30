@@ -130,6 +130,7 @@
     @reuse .bg-transparent;
     @reuse .h2;
     @reuse .pointer;
+    @reuse .min-w-2;
     @reuse .w2;
 
     @media (--breakpoint-large) {
@@ -202,6 +203,10 @@
   &--mobile-menu &-wrapper {
     @reuse .bg-white;
     border-bottom-right-radius: 0;
+
+    @media (--breakpoint-large) {
+      @reuse .br-pill;
+    }
   }
 
   &--mobile-menu &-mobile {
