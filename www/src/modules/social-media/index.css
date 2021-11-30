@@ -1,0 +1,29 @@
+.social-media-links {
+  color: var(--dark-blue);
+  @reuse .tc;
+
+  &-title {
+    @reuse .f2;
+    @reuse .mb0;
+  }
+
+  &-content {
+    @reuse .f4;
+    @reuse .mb4;
+  }
+
+  &-list {
+    @reuse .flex;
+    @reuse .justify-center;
+    @reuse .list;
+    @reuse .pl0;
+  }
+
+  &-item {
+    @reuse .mh1;
+
+    @media (--breakpoint-not-small) {
+      @reuse .mh2;
+    }
+  }
+}

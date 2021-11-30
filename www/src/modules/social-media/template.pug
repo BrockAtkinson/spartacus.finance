@@ -1,0 +1,28 @@
+-
+  let links = [
+    {
+      share: 'discord',
+      url: 'https://discord.com',
+    },
+    {
+      share: 'twitter',
+      url: 'https://twitter.com',
+    },
+    {
+      share: 'github',
+      url: 'https://github.com',
+    }
+  ];
+
+.module.social-media-links
+  .container
+    h4.social-media-links-title
+      | Join the community
+  .social-media-links-content
+    p Get updates on new products, features and more.
+  ul.social-media-links-list
+    each link, i in links
+      li.social-media-links-item
+        a(href=link.url)
+          picture
+            img(src='./icon/socialmedia-' + link.share + '.svg')
