@@ -93,6 +93,18 @@
   }
 }
 
+.currentcolor {
+  color: currentColor;
+}
+
+.bg-currentcolor {
+  background-color: currentColor;
+}
+
+.br5 {
+  border-radius: 2.5rem;
+}
+
 .blur {
   backdrop-filter: blur(1rem);
 }
