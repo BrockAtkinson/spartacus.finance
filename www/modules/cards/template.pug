@@ -1,12 +1,12 @@
 -
   let cards = [
     {
-      icon: 'thumbs-up',
+      icon: 'like',
       title: 'Growing treasury',
       content: 'Bond sales and liquidity fees increase Treasury values, which back outstanding SPA tokens with intrinsic value.',
     },
     {
-      icon: 'chart',
+      icon: 'bar',
       title: 'Protocol owned liquidity',
       content: 'No more predatory farmers.\n Lock-in liquidity also help regulate SPA supply.',
     },
@@ -21,6 +21,7 @@
   ul.cards-wrapper
     each card, i in cards
       li.cards-card
-        .cards-card-icon= card.icon
+        picture(if=card.icon)
+          img(src='./icon/' + card.icon + '.svg')
         h3.cards-card-title= card.title
         p.cards-card-content= card.content

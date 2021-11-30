@@ -1,12 +1,15 @@
 @import 'tachyons';
+
 @import './_abstracts';
 @import './_helpers';
 @import './_base';
 @import './_common';
-@import './_header';
-@import './_footer';
 @import './_page';
 @import './_util';
+
+@import '../components/header';
+@import '../components/footer';
+
 @import '../modules/banner';
 @import '../modules/cards';
 @import '../modules/content-grid';

@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  @reuse .bg-grey-1;
+  @reuse .bg-grey;
   @reuse .flex;
   @reuse .flex-column;
   @reuse .min-vh-100;

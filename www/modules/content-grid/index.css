@@ -18,6 +18,10 @@
     }
   }
 
+  &-content {
+    @reuse .lh-copy;
+  }
+
   &-clear {
     @reuse .cl;
   }

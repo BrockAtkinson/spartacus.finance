@@ -15,6 +15,7 @@
     @media (--breakpoint-large) {
       @reuse .nl4;
       @reuse .nr4;
+      @reuse .ph5;
     }
   }
 
@@ -37,7 +38,6 @@
 
     &-icon {
       color: var(--light-green);
-      @reuse .mt-auto;
     }
 
     &-title {
@@ -51,7 +51,6 @@
       color: var(--grey-1);
       @reuse .lh-copy;
       @reuse .mv-auto;
-      @reuse .ph4;
     }
   }
 }

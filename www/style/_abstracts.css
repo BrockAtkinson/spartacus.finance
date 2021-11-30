@@ -5,12 +5,15 @@
 @custom-media --breakpoint-large screen and (min-width: 60em);
 
 :root {
+  --brand-green: #3FD3B8;
+
   --off-white: #f2f2f2;
   --light-green: #3fd3b8;
   --dark-blue: #0d2155;
   --grey-0: #eef1f7;
   --grey-1: #70778a;
   --grey-2: #95a1bb;
+  --grey-3: #e1e5ee;
   --off-black: #121212;
 
   --speed: 0.2s;
