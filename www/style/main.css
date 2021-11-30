@@ -7,10 +7,10 @@
 @import './_page';
 @import './_util';
 
-@import '../components/header';
-@import '../components/footer';
+@import '../src/components/header';
+@import '../src/components/footer';
 
-@import '../modules/banner';
-@import '../modules/cards';
-@import '../modules/content-grid';
-@import '../modules/explainer';
+@import '../src/modules/banner';
+@import '../src/modules/cards';
+@import '../src/modules/content-grid';
+@import '../src/modules/explainer';

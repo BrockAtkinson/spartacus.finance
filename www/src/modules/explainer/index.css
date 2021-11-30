@@ -1,0 +1,52 @@
+.explainer {
+  @reuse .tc;
+  @reuse .brand-dark;
+
+  &-title {
+    @reuse .green;
+    @reuse .mb0;
+  }
+
+  &-container {
+    @media (--breakpoint-large) {
+      @reuse .items-end;
+      @reuse .flex;
+      @reuse .nt4;
+    }
+  }
+
+  &-left,
+  &-right {
+    @media (--breakpoint-large) {
+      @reuse .fl;
+      @reuse .h-100;
+      @reuse .ph5;
+      @reuse .w-50;
+    }
+  }
+
+  &-link {
+    @reuse .no-underline;
+    @reuse .color-inherit;
+
+    @media (--breakpoint-large) {
+      @reuse .db;
+    }
+  }
+
+  &-subtitle {
+    @reuse .f4;
+    @reuse .mb1;
+  }
+
+  &-description {
+
+    @media (--breakpoint-not-small) {
+      @reuse .ph4;
+    }
+
+    @media (--breakpoint-large) {
+      @reuse .ph0;
+    }
+  }
+}

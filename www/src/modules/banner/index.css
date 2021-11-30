@@ -1,0 +1,79 @@
+.banner {
+  @reuse .brand-dark;
+  @reuse .cf;
+  @reuse .tc;
+
+  @media (--breakpoint-not-small) {
+    @reuse .mv5;
+  }
+
+  @media (--breakpoint-large) {
+    @reuse .pv6;
+    @reuse .tl;
+  }
+
+  &-content-wrapper {
+    @reuse .pb4;
+
+    @media (--breakpoint-large) {
+      @reuse .pv5;
+    }
+  }
+
+  &-title {
+    @reuse .b;
+    @reuse .f2;
+    @reuse .lh-title;
+    @reuse .mt0;
+    @reuse .ttu;
+
+    @media (--breakpoint-not-small) {
+      @reuse .f1;
+    }
+  }
+
+  &-content {
+    @reuse .f4;
+    @reuse .lh-copy;
+    @reuse .tracked;
+    @reuse .ph4;
+
+    @media (--breakpoint-not-small) {
+      @reuse .ph5;
+    }
+
+    @media (--breakpoint-large) {
+      @reuse .pl0;
+      @reuse .pr6;
+    }
+  }
+
+  &-left,
+  &-right {
+    @media (--breakpoint-large) {
+      @reuse .fl;
+      @reuse .w-50;
+    }
+  }
+
+  &-right {
+    @reuse .nr3;
+
+    @media (--breakpoint-not-small) {
+      @reuse .nr4;
+    }
+
+    @media (--breakpoint-large) {
+      @reuse .mr0;
+    }
+  }
+
+  &-right {
+    @reuse .tr;
+
+    @media (--breakpoint-large) {
+      @reuse .absolute;
+      @reuse .right-0;
+    }
+  }
+}
