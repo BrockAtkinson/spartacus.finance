@@ -2,13 +2,13 @@ footer.footer-float
   ul.footer-list
     li.footer-item
       p.footer-label Total SPA Staked
-      p(data-numerator='ohmCirculatingSupply' data-denominator='sOhmCirculatingSupply').footer-value.suffix-percent 00.0%
+      p(data-numerator='ohmCirculatingSupply' data-denominator='sOhmCirculatingSupply').footer-value.suffix-percent 00.00
     li.footer-item
       p.footer-label Treasury Balance
-      p(data-feed='treasuryMarketValue').footer-value.prefix-dollar 00,000,000
+      p(data-feed='treasuryMarketValue' data-decimals='0').footer-value.prefix-dollar 00,000,000
     li.footer-item
       p.footer-label Market Cap
-      p(data-feed='marketCap').footer-value.prefix-dollar 00,000,000
+      p(data-feed='marketCap' data-decimals='0').footer-value.prefix-dollar 00,000,000
     li.footer-item
       p.footer-label Current APY
-      p(data-feed='currentAPY').footer-value.suffix-percent 0,000,000.0
+      p(data-feed='currentAPY').footer-value.suffix-percent 0,000,000.00

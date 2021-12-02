@@ -79,10 +79,14 @@ function query(gql, fn) {
     .catch(err);
 }
 
-function humanizeNumber(num) {
+function humanizeNumber(num, decimals = 2) {
+  if (typeof decimals != 'number') {
+    decimals = parseInt(decimals);
+  }
+
   return parseFloat(num).toLocaleString(lang, {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals
   });
 }
 
@@ -93,7 +97,7 @@ function pageContentUpdate(content) {
     let targets = qsa('[data-feed=' + key + ']')
     ;
     targets.forEach(target => {
-      target.textContent = humanizeNumber(val);
+      target.textContent = humanizeNumber(val, target.dataset.decimals);
     });
   });
 
