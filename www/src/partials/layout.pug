@@ -1,0 +1,24 @@
+doctype html
+block variables
+  - let site = {};
+head
+  meta(charset="utf-8")
+  title #{ site && site.title ? site.title : null }
+  link(href='style/main.css' rel='stylesheet')
+  script(src='script/index.js' type='module')
+  block headerScripts
+
+body(class='no-js')
+  script.
+    document.body.classList.remove('no-js')
+
+  include ../components/header/template
+
+  main.page
+    .page-content
+      block page
+    include ../components/footer/floating
+
+  include ../components/footer/template
+
+  block footerScripts

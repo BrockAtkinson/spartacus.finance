@@ -22,6 +22,10 @@
 
   &-card {
     @reuse .bg-white;
+    @reuse .b--current;
+    @reuse .b--solid;
+    @reuse .bw-px;
+    @reuse .grey-3;
     @reuse .br4;
     @reuse .flex;
     @reuse .flex-column;

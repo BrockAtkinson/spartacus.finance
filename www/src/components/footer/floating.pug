@@ -1,14 +1,8 @@
-footer.footer-float
-  ul.footer-list
-    li.footer-item
-      p.footer-label Total SPA Staked
-      p(data-numerator='ohmCirculatingSupply' data-denominator='sOhmCirculatingSupply').footer-value.suffix-percent 00.00
-    li.footer-item
-      p.footer-label Treasury Balance
-      p(data-feed='treasuryMarketValue' data-decimals='0').footer-value.prefix-dollar 00,000,000
-    li.footer-item
-      p.footer-label Market Cap
-      p(data-feed='marketCap' data-decimals='0').footer-value.prefix-dollar 00,000,000
-    li.footer-item
-      p.footer-label Current APY
-      p(data-feed='currentAPY').footer-value.suffix-percent 0,000,000.00
+if site && site.stats && site.stats.length
+  footer.footer-float
+    ul.footer-list
+      each stat in site.stats
+        li.footer-item
+          p.footer-label #{ stat.title }
+          p(data-feed=stat.feed data-numerator=stat.numerator data-denominator=stat.denominator data-decimals=stat.decimals class=stat.class).footer-value
+            | #{ stat.default }

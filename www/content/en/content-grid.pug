@@ -1,0 +1,26 @@
+extends ../../src/modules/content-grid/template
+
+block title
+  | Sustainable Liquidity Pool
+
+block variables
+  -
+    let content_grid = [
+      {
+        feed: 'treasuryRiskFreeValue',
+        decimals: 0,
+        class: 'prefix-dollar',
+        default: '00,000,000',
+        title: 'Protocol Owned Liquidity',
+        content: 'Spartacus plays an important role in Phantom ecosystem by funding liquidity pools with its crypto assets to earn a yield.',
+      },
+      {
+        feed: 'treasuryOhmDaiPOL',
+        decimals: 2,
+        class: 'suffix-percent',
+        default: '00.00',
+        title: 'of Total LP Supply',
+        content: 'Our liquidity pool is sustainably produced, which means it is not powered by inflationary means. It it democratically sourced and super fluid.',
+      },
+    ];
+

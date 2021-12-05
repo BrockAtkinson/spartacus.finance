@@ -1,11 +1,14 @@
+block variables
+  - let img = null;
+
 .module.banner
   .banner-left
     .banner-content-wrapper
       h1.banner-title
-        | Protocol-owned liquidity for a fair finance
+        block title
       .banner-content
-        p
-          | The largest treasury reserve protocol on Fantom network
+        block content
   .banner-right
-    picture.banner-picture
-      img(src='./media/spartacus-banner-image-1.png').banner-image
+    if img && 'src' in img
+      picture.banner-picture
+        img(src=img.src alt=img.alt).banner-image

@@ -1,29 +1,33 @@
-mixin pic(alt, first, second, w, h)
+mixin pic(alt, first, second, h, w)
   .replace-image
     img(src=first alt=alt height=h width=w).first
     img(src=second height=h width=w).second
 
 .module.explainer.tc
-  h3.explainer-title.
-    Information about (Λ, Λ)
-  p
+  h3.explainer-title
+    block title
+
+  block variables
+    - let explanation = {};
 
   .explainer-container
-    .explainer-left
-      a(href='//app.spartacus.finance/#/bond').explainer-link
-        +pic('Bond 1', 'media/Bond1.png', 'media/Bond2.png', 166, 142)
-        h4.explainer-subtitle
-          | Bonding
-        p.explainer-description
-          | Bit of an explanation about bonding. Bit of an explanation about bonding. Bit of an explanation about bonding.
+    if explanation.left
+      .explainer-left
+        a(href=explanation.left.link).explainer-link
+          +pic(explanation.left.image.title, explanation.left.image.src, explanation.left.image.replace, explanation.left.image.height,  explanation.left.image.width)
+          h4.explainer-subtitle
+            | #{ explanation.left.title }
+          p.explainer-description
+            | #{ explanation.left.content }
 
-    .explainer-right
-      a(href='//app.spartacus.finance/#/stake').explainer-link
-        .nowrap
-          +pic('Stake 1', 'media/Stake1.png', 'media/Stake2.png', 280, 268)
-        h4.explainer-subtitle
-          | Staking
-        p.explainer-description
-          | Bit of an explanation about staking. Bit of an explanation about staking. Bit of an explanation about staking.
+    if explanation.right
+      .explainer-right
+        a(href=explanation.right.link).explainer-link
+          +pic(explanation.right.image.title, explanation.right.image.src, explanation.right.image.replace, explanation.right.image.height,  explanation.right.image.width)
+          h4.explainer-subtitle
+            | #{ explanation.right.title }
+          p.explainer-description
+            | #{ explanation.right.content }
 
-    .cl
+    if explanation.left || explanation.right
+      .cl

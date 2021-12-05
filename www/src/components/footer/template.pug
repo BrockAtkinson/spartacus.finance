@@ -18,4 +18,8 @@ footer.footer
         li.footer-menu-item
           a.footer-menu-link(href='#docs') Docs
     p.footer-attribution
-      | © 2021 Spartacus Finance
+      | ©
+      | 
+      span= new Date().getFullYear()
+      | 
+      | #{ site && site.title ? site.title : null }

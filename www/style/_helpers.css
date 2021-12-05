@@ -6,6 +6,14 @@
   background-color: var(--dark-blue);
 }
 
+.bw-px {
+  border-width: 1px;
+}
+
+.b--current {
+  border-color: currentColor
+}
+
 .green {
   color: var(--brand-green);
 }

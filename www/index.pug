@@ -1,10 +1,41 @@
-doctype html
-head
-  meta(charset="utf-8")
-  title Spartacus Finance
-  link(href='style/main.css' rel='stylesheet')
-  script(src='script/index.js' type='module')
-body(class='no-js')
-  script.
-    document.body.classList.remove('no-js')
-  include src/partials/page
+extends src/partials/layout
+
+block variables
+  -
+    let site = {
+      title: 'Spartacus Finance',
+      stats: [
+        {
+          title: 'Total SPA Staked',
+          class: 'suffix-percent',
+          default: '00.00',
+          decimals: 2,
+          numerator: 'ohmCirculatingSupply',
+          denominator: 'sOhmCirculatingSupply',
+        },
+        {
+          title: 'Total SPA Staked',
+          class: 'suffix-percent',
+          default: '00,000,000',
+          decimals: 0,
+          feed: 'treasuryMarketValue',
+        },
+        {
+          title: 'Market Cap',
+          class: 'prefix-dollar',
+          default: '00,000,000',
+          decimals: 0,
+          feed: 'marketCap',
+        },
+        {
+          title: 'Current APY',
+          class: 'suffix-percent',
+          default: '000,000.00',
+          decimals: 2,
+          feed: 'currentAPY',
+        },
+      ],
+    };
+
+block page
+  include content/en/index
