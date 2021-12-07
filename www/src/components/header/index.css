@@ -196,11 +196,12 @@
   }
 
   &--mobile-menu &-wrapper {
-    @reuse .blur-none;
     @reuse .bg-transparent;
+    @reuse .blur-none;
 
     @media (--breakpoint-large) {
       @reuse .br-pill;
+      @reuse .blur;
     }
   }
 
