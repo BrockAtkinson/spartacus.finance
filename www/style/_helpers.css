@@ -115,6 +115,10 @@
 
 .blur {
   backdrop-filter: blur(1rem);
+
+  &-none {
+    backdrop-filter: blur(0);
+  }
 }
 
 .flex-grow {
@@ -270,6 +274,36 @@
   &-transform {
     transition-property: transform;
   }
+
+  &--slow {
+    transition-duration: var(--slow);
+  }
+
+  &--fast {
+    transition-duration: var(--fast);
+  }
+}
+
+.translate-x {
+  &-0 {
+    transform: translateX(0);
+  }
+
+  &-1 {
+    transform: translateX(1rem);
+  }
+
+  &--1 {
+    transform: translateX(-1rem);
+  }
+
+  &-100 {
+    transform: translateX(100%);
+  }
+
+  &--100 {
+    transform: translateX(-100%);
+  }
 }
 
 .translate-y {
@@ -283,6 +317,10 @@
 
   &--1 {
     transform: translateY(-1rem);
+  }
+
+  &-100 {
+    transform: translateY(100%);
   }
 
   &--100 {

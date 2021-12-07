@@ -21,7 +21,7 @@
     @reuse .ph3;
     @reuse .pv3;
     @reuse .trans;
-    transition-property: background-color, border-radius;
+    transition-property: backdrop-filter, background-color, border-radius;
     @reuse .w-100;
 
     @media (--breakpoint-not-small) {
@@ -73,11 +73,7 @@
 
   &-menu-item {
     @reuse .mv3;
-    @reuse .tc;
-
-    @media (--breakpoint-not-small) {
-      @reuse .tr;
-    }
+    @reuse .tl;
 
     @media (--breakpoint-large) {
       @reuse .mv0;
@@ -114,7 +110,11 @@
   }
 
   &-button-wrapper {
-    @reuse .tc;
+    @reuse .pt5;
+
+    @media (--breakpoint-large) {
+      @reuse .pt0;
+    }
   }
 
   &-button {
@@ -159,19 +159,17 @@
 
   &-mobile {
     @reuse .absolute;
-    @reuse .bg-white;
     @reuse .br4;
-    @reuse .br--bottom;
-    @reuse .right-0;
     @reuse .flex-grow;
     @reuse .pe-none;
     @reuse .pb3;
-    @reuse .ph3;
+    @reuse .ph2;
     @reuse .o-0;
     @reuse .top-100;
     @reuse .trans;
+    @reuse .trans--slow;
     transition-property: opacity, transform;
-    @reuse .translate-y--100;
+    @reuse .translate-x--100;
     @reuse .w-100;
     @reuse .z--1;
 
@@ -179,13 +177,7 @@
       @reuse .o-100;
       @reuse .pb4;
       @reuse .pe-auto;
-      @reuse .translate-y-0;
-    }
-
-    @media (--breakpoint-not-small) {
-      @reuse .br5;
-      @reuse .br--bottom;
-      @reuse .w-auto;
+      @reuse .translate-x-0;
     }
 
     @media (--breakpoint-large) {
@@ -199,13 +191,13 @@
       @reuse .ph0;
       @reuse .static;
       @reuse .trans-opacity;
-      @reuse .translate-y-0;
+      @reuse .translate-x-0;
     }
   }
 
   &--mobile-menu &-wrapper {
-    @reuse .bg-white;
-    border-bottom-right-radius: 0;
+    @reuse .blur-none;
+    @reuse .bg-transparent;
 
     @media (--breakpoint-large) {
       @reuse .br-pill;
@@ -215,7 +207,7 @@
   &--mobile-menu &-mobile {
     @reuse .o-100;
     @reuse .pe-auto;
-    @reuse .translate-y-0;
+    @reuse .translate-x-0;
 
     @media (--breakpoint-large) {
       @reuse .flex-row;
@@ -225,19 +217,32 @@
   &--mobile-menu &-hamburger-line {
     @reuse .active-menu-button;
   }
-}
 
-.no-js {
-  .header {
-    &-hamburger:active ~ &-mobile,
-    &-hamburger:focus ~ &-mobile {
-      @reuse .o-100;
-      @reuse .pe-auto;
-      @reuse .translate-y-0;
-    }
+  &::after {
+    content: '';
+    height: 100vh;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    @reuse .blur;
+    @reuse .trans;
+    @reuse .trans-opacity;
+    @reuse .trans--fast;
+  }
 
-    &-hamburger:focus > &-line {
-      @reuse .active-menu-button;
+  &--mobile-menu::after {
+    opacity: 1;
+    pointer-events: auto;
+
+    @media (--breakpoint-large) {
+      opacity: 0;
+      pointer-events: none;
     }
   }
 }
