@@ -59,24 +59,32 @@
   &--left &-left,
   &--right &-right {
     @reuse .relative;
+    @reuse .nl3;
+    @reuse .nr3;
+
+    @media (--breakpoint-not-small) {
+    }
+
+    @media (--breakpoint-large) {
+      @reuse .ml0;
+      @reuse .mr0;
+    }
   }
 
   &--left &-left-content,
   &--right &-right-content {
-    @media (--breakpoint-large) {
+    @media (--breakpoint-medium) {
+      @reuse .nl3;
+      @reuse .nr3;
     }
   }
 
   &--left &-left-content {
-    @reuse .nl3;
     @reuse .tl;
-
-    @media (--breakpoint-not-small) {
-      @reuse .nl5;
-    }
 
     @media (--breakpoint-large) {
       @reuse .left-0;
+      @reuse .nl5;
     }
   }
 
@@ -93,16 +101,11 @@
   }
 
   &--right &-right-content {
-    @reuse .nr3;
     @reuse .tr;
 
-    @media (--breakpoint-not-small) {
-      @reuse .nr5;
-    }
-
     @media (--breakpoint-large) {
-      @reuse .absolute;
       @reuse .right-0;
+      @reuse .nr5;
     }
   }
 }
