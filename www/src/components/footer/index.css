@@ -47,7 +47,10 @@
     }
   }
 
-  &-logo&-text {
+  &-logo-text {
+    @reuse .off-white;
+    @reuse .ttu;
+    @reuse .tracked;
     @reuse .ml3;
   }
 
@@ -106,7 +109,7 @@
   }
 
   &-float {
-    @reuse .bg-black;
+    @reuse .bg-off-black;
     @reuse .bottom-0;
     @reuse .ph3;
     @reuse .pv3;

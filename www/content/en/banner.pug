@@ -1,15 +1,19 @@
-extends ../../src/modules/banner/template
+extends ../../src/modules/banner/view
 
 block title
-  | Protocol-owned liquidity for a fair finance
+  | Protocol-owned treasury on Fantom
 
 block content
-  p
-    | The largest treasury reserve protocol on Fantom network
+  p Fair and stable finance for everyone.
+  br
+  br
+  br
+  br
+  p.grey
+    a(href='https://spookyswap.finance/swap?inputCurrency=0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e&outputCurrency=0x5602df4A94eB6C680190ACCFA2A475621E0ddBdc').button.bg-brand-dark
+      | Get SPA
+      img(src='media/logo-spookyswap.png').small-img
 
-block variables
-  -
-    let img = {
-      src: './media/spartacus-banner-image-1.png'
-    };
-
+block image
+  picture.banner-picture.banner--mask-1
+    img(src='media/spartacus-banner-image-1.png' alt='Spartacus and his friends').banner-image

@@ -32,19 +32,22 @@
 
   &-logo {
     @reuse .min-w-2;
+  }
 
-    &-link {
-      @reuse .b;
-      @reuse .flex;
-      @reuse .gray;
-      @reuse .items-center;
-      @reuse .no-underline;
-      @reuse .pr2;
-    }
+  &-logo-link {
+    @reuse .b;
+    @reuse .flex;
+    @reuse .gray;
+    @reuse .items-center;
+    @reuse .no-underline;
+    @reuse .pr2;
+  }
 
-    &-text {
-      @reuse .ml3;
-    }
+  &-logo-text {
+    @reuse .off-black;
+    @reuse .ttu;
+    @reuse .tracked;
+    @reuse .ml3;
   }
 
   &-nav {

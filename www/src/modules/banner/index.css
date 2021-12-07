@@ -56,20 +56,49 @@
     }
   }
 
-  &-right {
-    @reuse .nr3;
+  &--left &-left,
+  &--right &-right {
+    @reuse .relative;
+  }
 
-    @media (--breakpoint-not-small) {
-      @reuse .nr4;
-    }
-
+  &--left &-left-content,
+  &--right &-right-content {
     @media (--breakpoint-large) {
-      @reuse .mr0;
     }
   }
 
-  &-right {
+  &--left &-left-content {
+    @reuse .nl3;
+    @reuse .tl;
+
+    @media (--breakpoint-not-small) {
+      @reuse .nl5;
+    }
+
+    @media (--breakpoint-large) {
+      @reuse .left-0;
+    }
+  }
+
+  &--right &-left-content {
+    @media (--breakpoint-large) {
+      @reuse .pr4;
+    }
+  }
+
+  &--left &-right-content {
+    @media (--breakpoint-large) {
+      @reuse .pl4;
+    }
+  }
+
+  &--right &-right-content {
+    @reuse .nr3;
     @reuse .tr;
+
+    @media (--breakpoint-not-small) {
+      @reuse .nr5;
+    }
 
     @media (--breakpoint-large) {
       @reuse .absolute;

@@ -3,7 +3,7 @@
   @reuse .black;
   @reuse .br-pill;
   @reuse .color-inherit;
-  @reuse .flex;
+  @reuse .inline-flex;
   @reuse .flex-nowrap;
   @reuse .items-center;
   @reuse .justify-center;
@@ -13,6 +13,41 @@
   @reuse .tc;
   @reuse .tracked;
   @reuse .ttu;
+}
+
+.small-img {
+  @reuse .w2;
+}
+
+.banner--mask-1 {
+  @reuse .bg-inherit;
+  @reuse .relative;
+  @reuse .db;
+
+  & > img {
+    mask-image: url(../media/mask-banner-left-1.svg);
+    -webkit-mask-attachment: fixed;
+    mask-position: center center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.banner--mask-2 {
+  @reuse .bg-inherit;
+  @reuse .relative;
+  @reuse .db;
+
+  & > img {
+    mask-image: url(../media/mask-banner-right-1.svg);
+    mask-position: center center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .module {
