@@ -134,7 +134,13 @@
   }
 
   &-item {
+    @reuse .flex-basis-50;
+    @reuse .flex-grow;
     @reuse .pa2;
+
+    @media (--breakpoint-large) {
+      @reuse .flex-basis-25;
+    }
   }
 
   &-label {
