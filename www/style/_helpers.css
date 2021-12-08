@@ -125,6 +125,24 @@
   flex-grow: 1;
 }
 
+.flex-basis {
+  &-25 {
+    flex-basis: 25%;
+  }
+
+  &-50 {
+    flex-basis: 50%;
+  }
+
+  &-75 {
+    flex-basis: 75%;
+  }
+
+  &-100 {
+    flex-basis: 100%;
+  }
+}
+
 .h {
   &-1 {
     height: 0.0625rem;

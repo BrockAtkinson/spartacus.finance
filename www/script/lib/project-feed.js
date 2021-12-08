@@ -8,6 +8,8 @@ import {
 
 let lang = navigator.language;
 
+const NUMBER_ANIMATE_SPEED = 1000;
+
 const FTM_GRAPH_URL = 'https://api.thegraph.com/subgraphs/name/spartacus-finance/ftm2';
 
 const client = new ApolloClient({
@@ -90,18 +92,33 @@ function humanizeNumber(num, decimals = 2) {
   });
 }
 
+function animateNumber(obj, start, end, duration, decimals = 0) {
+  let startTimestamp = null;
+  const step = (timestamp) => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    let result = humanizeNumber(progress * (end - start) + start, decimals);
+    obj.textContent = result;
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    }
+  };
+  window.requestAnimationFrame(step);
+}
+
 function pageContentUpdate(content) {
   let keys = Object.keys(content);
+  let divisions = qsa('[data-numerator][data-denominator]');
+
   keys.forEach(key => {
     let val = content[key];
     let targets = qsa('[data-feed=' + key + ']')
     ;
     targets.forEach(target => {
-      target.textContent = humanizeNumber(val, target.dataset.decimals);
+      animateNumber(target, 0, parseInt(val), NUMBER_ANIMATE_SPEED, target.dataset.decimals);
     });
   });
 
-  let divisions = qsa('[data-numerator][data-denominator]');
   divisions.forEach(el => {
     let data = el.dataset;
     let top = content[el.dataset.numerator];
@@ -109,7 +126,8 @@ function pageContentUpdate(content) {
     let numerator = parseFloat(top);
     let denominator = parseFloat(bot);
     let divide = denominator / numerator * 100;
-    el.textContent = humanizeNumber(divide);
+
+    animateNumber(el, 0, parseInt(divide), NUMBER_ANIMATE_SPEED, 2);
   });
 }
 
