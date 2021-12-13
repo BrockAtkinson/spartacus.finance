@@ -25,6 +25,7 @@
     ul.social-media-links-list
       each link, i in links
         li.social-media-links-item
-          a(href=link.url)
+          a(href=link.url target='_blank').social-media-links-link
+            span.dn= link.share
             picture
-              img(src='./icon/socialmedia-' + link.share + '.svg')
+              img(src='./icon/socialmedia-' + link.share + '.svg' alt=link.share + ' logo')

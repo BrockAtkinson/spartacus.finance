@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,700;1,300;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 .poppins {
   font-family: 'Poppins';
@@ -12,6 +12,7 @@ body {
   @reuse .bg-grey;
   @reuse .flex;
   @reuse .flex-column;
+  @reuse .normal;
   @reuse .min-vh-100;
   @reuse .sans-serif;
   @reuse .poppins;

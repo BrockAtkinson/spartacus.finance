@@ -1,12 +1,21 @@
 extends ../../src/modules/banner/left
 
+block abstracts
+  - site.bannerclass = 'banner--content';
+
 block title
   | Stake your funds in Spartacus
 
 block content
   p
     | Exploit the opportunity from auto-compounded yields through community pooling.
-  p
+  p.buttons
+    a(href='https://app.spartacus.finance/#/stake').button.button--secondary
+      | Stake
+    a(href='https://spookyswap.finance/swap?inputCurrency=0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e&outputCurrency=0x5602df4A94eB6C680190ACCFA2A475621E0ddBdc').button.button--primary
+      | Get SPA
+  br
+  br
   p
     u
       | How can this yield be so high?

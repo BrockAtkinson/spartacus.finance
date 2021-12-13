@@ -13,6 +13,48 @@
   @reuse .tc;
   @reuse .tracked;
   @reuse .ttu;
+
+  &--wide {
+    @reuse .ph4;
+  }
+
+  &--wide-left {
+    @reuse .pl4;
+    @reuse .pr3;
+  }
+
+  &--wide-right {
+    @reuse .pl3;
+    @reuse .pr4;
+  }
+
+  &--primary,
+  &--secondary {
+    @reuse .white;
+    @reuse .button--wide;
+  }
+
+  &--primary {
+    @reuse .bg-brand-dark;
+  }
+
+  &--secondary {
+    @reuse .bg-green;
+  }
+}
+
+.buttons {
+  @reuse .inline-flex;
+  @reuse .flex-wrap;
+  @reuse .nb1;
+  @reuse .nl2;
+  @reuse .nr2;
+  @reuse .nt1;
+
+  .button {
+    @reuse .mh2;
+    @reuse .mv1;
+  }
 }
 
 .small-img {

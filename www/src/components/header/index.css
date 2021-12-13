@@ -178,6 +178,10 @@
       @reuse .pb4;
       @reuse .pe-auto;
       @reuse .translate-x-0;
+
+      @media (--breakpoint-large) {
+        @reuse .pb0;
+      }
     }
 
     @media (--breakpoint-large) {

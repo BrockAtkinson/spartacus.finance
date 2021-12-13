@@ -278,6 +278,10 @@
   }
 }
 
+.tracked-small {
+  letter-spacing: .05em;
+}
+
 .trans {
   transition: all var(--speed) var(--ease);
 

@@ -1,8 +1,10 @@
 doctype html
 block variables
   - let site = {};
+  - let content = {};
 head
   meta(charset="utf-8")
+  meta(name='viewport' content='initial-scale=1, width=device-width')
   title #{ site && site.title ? site.title : null }
   link(href='style/main.css' rel='stylesheet')
   script(src='script/index.js' type='module')

@@ -6,17 +6,18 @@
     - let content_grid = [];
 
   each item in content_grid
-    if item.title
-      .content-grid-left
-        p
-          .content-grid-highlight(data-feed=item.feed data-decimals=item.decimals class=item.class)
-            | #{ item.default }
-          span 
-            | #{ item.title }
+    if item.title || item.content
+      .content-grid-section
+        if item.title
+          .content-grid-left
+            h3.content-grid-highlight(data-feed=item.feed data-decimals=item.decimals class=item.class)
+              | #{ item.default }
+            span.content-grid-subtitle
+              | #{ item.title }
 
-    if item.content
-      .content-grid-right.content-grid-content
-        p
-          | #{ item.content }
+        if item.content
+          .content-grid-right.content-grid-content
+            p
+              | #{ item.content }
 
-    .content-grid-clear
+        .content-grid-clear

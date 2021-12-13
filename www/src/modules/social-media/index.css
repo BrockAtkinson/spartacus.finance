@@ -1,6 +1,7 @@
 .social-media-links {
   color: var(--dark-blue);
-  @reuse .mv5;
+  @reuse .mb6;
+  @reuse .mt5;
   @reuse .tc;
 
   &-title {
@@ -25,6 +26,26 @@
 
     @media (--breakpoint-not-small) {
       @reuse .mh2;
+    }
+  }
+
+  &-link {
+    @reuse .inline-flex;
+    @reuse .trans;
+    transition-property: transform;
+
+    &:focus,
+    &:hover {
+      transform: scale(1.25);
+    }
+
+    &:active {
+      transition-duration: var(--fast);
+      transform: scale(1);
+    }
+
+    picture {
+      @reuse .inline-flex;
     }
   }
 }

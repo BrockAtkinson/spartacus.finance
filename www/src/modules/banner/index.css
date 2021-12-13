@@ -13,7 +13,7 @@
   }
 
   &-content-wrapper {
-    @reuse .pb4;
+    @reuse .pv4;
 
     @media (--breakpoint-large) {
       @reuse .pv5;
@@ -21,11 +21,13 @@
   }
 
   &-title {
-    @reuse .b;
-    @reuse .f3;
     @reuse .lh-title;
     @reuse .mt0;
     @reuse .ttu;
+  }
+
+  &--hero &-title {
+    @reuse .f3;
 
     @media (--breakpoint-not-small) {
       @reuse .f1;
@@ -35,7 +37,6 @@
   &-content {
     @reuse .f4;
     @reuse .lh-copy;
-    @reuse .tracked;
     @reuse .ph4;
 
     @media (--breakpoint-not-small) {
@@ -46,6 +47,10 @@
       @reuse .pl0;
       @reuse .pr6;
     }
+  }
+
+  &--hero &-content {
+    @reuse .tracked-small;
   }
 
   &-left,
@@ -61,9 +66,6 @@
     @reuse .relative;
     @reuse .nl3;
     @reuse .nr3;
-
-    @media (--breakpoint-not-small) {
-    }
 
     @media (--breakpoint-large) {
       @reuse .ml0;
@@ -106,6 +108,12 @@
     @media (--breakpoint-large) {
       @reuse .right-0;
       @reuse .nr5;
+    }
+  }
+
+  &--content {
+    @media (--breakpoint-large) {
+      @reuse .pv4;
     }
   }
 }
