@@ -135,7 +135,7 @@ function init() {
   query(treasuryDataQuery, (result) => {
     let metrics = result.data.protocolMetrics;
     let latest = metrics[0];
-    // console.log('latest', latest);
+    console.log('Metrics', latest);
     pageContentUpdate(latest);
   });
 
