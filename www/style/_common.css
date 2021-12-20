@@ -31,25 +31,45 @@
   &--primary,
   &--secondary {
     @reuse .white;
-    @reuse .button--wide;
+    @reuse .trans;
+    transition-property: background-color, box-shadow;
   }
 
   &--primary {
     @reuse .bg-brand-dark;
+
+    &:focus,
+    &:hover {
+      @reuse .bg-green;
+      @reuse .box-shadow;
+      @reuse .box-shadow--secondary;
+    }
   }
 
   &--secondary {
     @reuse .bg-green;
+
+    &:focus,
+    &:hover {
+      @reuse .bg-brand-dark;
+      @reuse .box-shadow;
+      @reuse .box-shadow--primary;
+    }
   }
 }
 
 .buttons {
   @reuse .inline-flex;
   @reuse .flex-wrap;
+  @reuse .justify-center;
   @reuse .nb1;
   @reuse .nl2;
   @reuse .nr2;
   @reuse .nt1;
+
+  @media (--breakpoint-large) {
+    @reuse .justify-start;
+  }
 
   .button {
     @reuse .mh2;
@@ -108,14 +128,13 @@
   background-image: linear-gradient(currentColor, currentColor);
   background-repeat: no-repeat;
   background-size: 0% 0.125rem;
-  background-position: bottom right;
+  background-position: bottom center;
   transition: background-size 0.2s ease-in;
   transition-property: background-size;
 }
 
 .link-underline-reveal {
   background-size: 100% 0.125rem;
-  background-position: bottom left;
 }
 
 .active-menu-button {

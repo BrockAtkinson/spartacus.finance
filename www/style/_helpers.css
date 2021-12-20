@@ -14,6 +14,19 @@
   border-color: currentColor
 }
 
+.box-shadow {
+  --box-shadow-color: currentColor;
+  box-shadow: 0 0 0.5rem 0 var(--box-shadow-color);
+
+  &--primary {
+    --box-shadow-color: var(--brand-blue);
+  }
+
+  &--secondary {
+    --box-shadow-color: var(--brand-green);
+  }
+}
+
 .green {
   color: var(--brand-green);
 }
@@ -284,6 +297,10 @@
 
 .trans {
   transition: all var(--speed) var(--ease);
+
+  &-bg {
+    transition-property: background;
+  }
 
   &-bg-color {
     transition-property: background-color;

@@ -118,7 +118,6 @@
   }
 
   &-button {
-    @reuse .bg-green;
     @reuse .b--grey-3;
     @reuse .b--solid;
     @reuse .bw1;

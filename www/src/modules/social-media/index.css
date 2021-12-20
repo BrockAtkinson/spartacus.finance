@@ -6,7 +6,9 @@
 
   &-title {
     @reuse .f2;
+    @reuse .lh-title;
     @reuse .mb0;
+    @reuse .ttu;
   }
 
   &-content {

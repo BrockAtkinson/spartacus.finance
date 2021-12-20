@@ -45,7 +45,6 @@
 
     @media (--breakpoint-large) {
       @reuse .pl0;
-      @reuse .pr6;
     }
   }
 
